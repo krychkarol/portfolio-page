@@ -1,0 +1,151 @@
+.home{
+    @include margin();
+    height: (100vh-$NavHeight);
+    z-index: 1;
+    position: relative;
+
+    .scrolls{
+        position: absolute;
+        left: 0;
+        bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include font(1.2rem,400,$Primary,$Light);
+
+        .text{
+            writing-mode: vertical-rl;
+        }
+    }
+
+    .wrapper{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .home1,.home2{
+            padding: 20px 0px;
+        }
+
+        .h2,.p2,.home2{
+            text-align: end;
+        }
+
+        .text{
+            display: flex;
+            flex-direction: column;
+            margin-left: $NavHeight/2;
+            width: fit-content;
+
+            .title{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                .content{
+                    display: inline-table;
+                    margin: 0px $NavHeight/2;
+                    @include font($HomeTitleSize,600,$Primary,$White);
+
+                    img{
+                        height:$HomeTitleSize;
+                    }
+                }
+            }
+
+            .subtitle{
+                display: flex;
+                flex-direction: column;
+                width: fit-content;
+
+                .content{
+                    margin: 0px $NavHeight/2;
+                    @include font($HomeSubtitleSize,400,$Primary,$NavBackgroundDark);
+
+                    .js,.css,.react{
+                        transition: color 1s ease; 
+                    }
+                    .js:hover,.css:hover,.react:hover{
+                        transition: color 1s ease; 
+                    }
+                    .js:hover{
+                        color: $JS;
+                    }
+                    .css:hover{
+                        color: $CSS;
+                    }
+                    .react:hover{
+                        color: $React;
+                    }
+                }
+            }
+        }
+    }
+
+//ANIMATION
+
+    @keyframes sideIn {
+        70% {
+            color: inherit;
+        }
+        95% {
+            color: $Blue;
+        }
+        100% {
+            opacity: 1;
+            color: inherit;
+        }
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes fadeInLow {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: .2;
+        }
+    }
+    @keyframes scrollAnimation {
+        0% {
+            margin-bottom: 20px;
+        }
+        50% {
+            margin-bottom: 0px;
+        }
+        100% {
+            margin-bottom: 20px;
+        }
+    }
+
+    .home1,.h1,.h2,.home2{
+        animation: fadeIn 5s alternate;
+    }
+    .titleAnimation span {
+        color: $Red;
+        opacity: 0;
+        animation: sideIn 1s forwards;
+        transition: color 10s ease; 
+    }
+    .p1,.p2,.scrolls,.subtitleAnimation span {
+        opacity: 0;
+        animation-delay: 2.5s !important;
+        animation: fadeIn 2.5s forwards;
+    }
+    .scrolls{
+        animation-delay: 2.5s !important;
+        animation: fadeInLow 2.5s forwards;
+    }
+    .scrollAnimation{
+        animation: scrollAnimation 2s infinite linear;
+    }
+}

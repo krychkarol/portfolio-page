@@ -1,0 +1,50 @@
+//FONTS
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$Primary: 'Kanit', sans-serif;
+$Secondary: 'Shadows Into Light', cursive;
+
+@mixin font ($size, $weight, $family, $color){
+    color: $color;
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+$HomeTitleSize: clamp(2rem, 8vw, 7rem);
+$HomeSubtitleSize: clamp(1.2rem, 3vw, 2rem);
+$HTMLSize: clamp(0.8rem, 2vw, 1rem);
+
+//COLORS
+$Background: #363636;
+$NavBackground: #272727;
+$NavBackgroundDark: #181818;
+$Light: #bebebe;
+$Black: #000000;
+$White: #ffffff;
+$Blue: #52f0fc;
+$Red: #ff0000;
+
+$JS: #F0DB4F;
+$CSS: #264de4;
+$React: #61DBFB;
+
+//VARIABLES
+$NavHeight: 10vh;
+
+@mixin margin {
+	@media (max-width:#{$NavBreakpoints}) {
+        margin:  0px $NavHeight/2;
+    }
+    @media (max-width:#{$sm}) {
+        margin:  0px $NavHeight/5;
+    }
+    margin:  0px $NavHeight;
+}
+
+//BREAKPOINTS
+$NavBreakpoints: 768px;
+
+$sm: 576px;
+$md: $NavBreakpoints;

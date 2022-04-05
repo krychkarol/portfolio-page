@@ -1,0 +1,16 @@
+@import './styles/_var.scss';
+@import './styles/_navbar.scss';
+@import './styles/_home.scss';
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: $Background;
+
+    .html{
+        @include font($HTMLSize,300,$Secondary,$Light);
+        letter-spacing: .3rem;
+    }
+}

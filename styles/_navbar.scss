@@ -1,0 +1,147 @@
+@import './_var.scss';
+
+.navbar{
+    z-index: 99;
+    @include font(($NavHeight / 3),600,$Primary,$Light);
+    height: $NavHeight;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: $NavBackground;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo{
+        height: $NavHeight;
+        width: $NavHeight;
+        background-color: $NavBackgroundDark;
+        border-right: 2px solid $Background;
+        transition: all 1s ease;
+
+        img{
+            height: 100%;
+            transition: all 1s ease;
+        }
+    }
+    .logo:hover{
+        cursor: pointer;
+        background-color: $Light;
+
+        img{
+           transform: scale(1.2) rotatey(180deg); 
+        }
+    }
+
+    .menu{
+        @media (max-width:#{$NavBreakpoints}) {
+            display: none;
+        }
+
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        .option{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            border-left: 2px solid $Background;
+            padding: 0px 30px;
+            transition: all 1s ease;
+            span{
+                transition: all 0.5s ease;
+            }
+        }
+        .option:hover{
+            cursor: pointer;
+            background-color: $NavBackgroundDark;
+            color: $White;
+            span{
+                transform: scale(1.1)
+            }
+        }
+    }
+
+    .dropdown-menu{
+        @media (max-width:#{$NavBreakpoints}) {
+            display: flex;
+        }
+
+        height: 100%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        border-left: 2px solid $Background;
+        transition: all 1s ease;
+
+        .material-icons{
+            font-size: ($NavHeight/1.5);
+            padding: 0px 20px;
+            transition: all 0.5s ease;
+        }
+
+        #close-menu{
+            display: none;
+        }
+        #open-menu{
+            display: flex;
+        }
+
+        .dropdown{
+            position: absolute;
+            top:$NavHeight;
+            right:0px;
+            bottom:0px;
+            left:0px;
+            width: 100%;
+            height: (100vh-$NavHeight);
+            background-color: $NavBackground;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            touch-action: none;
+            border-top: 2px solid $Background;
+            
+            .option-dropdown{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 20vh;
+                width: 100%;
+                transition: all 1s ease;
+                span{
+                    transition: all .5s ease;
+                }
+            }
+            .border{
+                width: 100%;
+                border: 1px solid $Background;
+            }
+            .option-dropdown:hover{
+                background-color: $NavBackgroundDark;
+                span{
+                    transform: scale(1.2)
+                }
+            }
+        }
+    }
+    .dropdown-menu:hover{
+        .option-dropdown{
+           cursor: pointer;
+        }
+        background-color: $NavBackgroundDark;
+        .material-icons{
+            transform: scale(1.1)
+        }
+    }
+}
+
+.navbar-padding{
+    padding-top: $NavHeight;
+}
