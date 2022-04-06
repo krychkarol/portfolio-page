@@ -6,7 +6,7 @@
 
     .scrolls{
         position: absolute;
-        left: 0;
+        left: 0 - ($NavHeight/4);
         bottom: 20px;
         display: flex;
         flex-direction: column;
@@ -37,7 +37,7 @@
         .text{
             display: flex;
             flex-direction: column;
-            margin-left: $NavHeight/2;
+            margin-left: $NavHeight/4;
             width: fit-content;
 
             .title{
@@ -47,7 +47,7 @@
 
                 .content{
                     display: inline-table;
-                    margin: 0px $NavHeight/2;
+                    margin: 0px $NavHeight/4;
                     @include font($HomeTitleSize,600,$Primary,$White);
 
                     img{
@@ -62,7 +62,7 @@
                 width: fit-content;
 
                 .content{
-                    margin: 0px $NavHeight/2;
+                    margin: 0px $NavHeight/4;
                     @include font($HomeSubtitleSize,400,$Primary,$NavBackgroundDark);
 
                     .js,.css,.react{

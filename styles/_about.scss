@@ -1,0 +1,121 @@
+.about{
+    @include margin();
+    z-index: 1;
+    display: flex;
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .about1,.about2{
+            padding: 20px 0px;
+        }
+
+        .h2,.p2,.about2,.q2{
+            text-align: end;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: row;
+
+            .left{
+                flex: 7;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .title{
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: $NavHeight/4;
+                    width: fit-content;
+
+                    .content{
+                        display: inline-table;
+                        margin: 0px $NavHeight/4;
+                        @include font($AboutTitleSize,500,$Primary,$Blue);
+                    }
+                }
+
+                .text{
+                    display: flex;
+                    flex-direction: column;
+                    width: fit-content;
+                    margin: 0 $NavHeight/4;
+
+                    .aboutme{
+                        margin: 0 $NavHeight/24;
+                        @include font($AboutTextSize,300,$Primary,$White);
+                    }
+                }
+            }
+            .right{
+                @media (max-width:#{$lg}) {
+                    display: none;
+                }
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+
+                .quote{
+                    @include font($AboutTextSize,200,$Secondary,$NavBackgroundDark);
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+//ANIMATION
+
+    @keyframes leftToRight {
+        40% {
+            transform: translate(50px, 0) scale(.5);
+            opacity: 1;
+        }
+
+        60% {
+            color: $White;
+        }
+
+        80% {
+            transform: translate(0) scale(2);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translate(0) scale(1);
+            opacity: 1;
+        }
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .animate span {
+        display: inline-block;
+    }
+
+    .titleAnimation span {
+        color: $Blue;
+        opacity: 0;
+        transform: translate(-150px, 0) scale(.3);
+    }
+    .animate span{
+        animation: leftToRight 1s forwards;
+    }
+    .aboutHTML, .quote ,.aboutme{
+        opacity: 0;
+    }
+    .aboutHTML.animate , .quote.animate,.aboutme.animate{
+        animation: fadeIn 3s linear forwards;
+    }
+}

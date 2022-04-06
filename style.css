@@ -237,13 +237,13 @@
 
 @media (max-width: 576px) {
   .home {
-    margin: 0px 2vh;
+    margin: 0px 10px;
   }
 }
 
 .home .scrolls {
   position: absolute;
-  left: 0;
+  left: -2.5vh;
   bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,7 +300,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 5vh;
+  margin-left: 2.5vh;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -319,7 +319,7 @@
 
 .home .wrapper .text .title .content {
   display: inline-table;
-  margin: 0px 5vh;
+  margin: 0px 2.5vh;
   color: #ffffff;
   font-family: "Kanit", sans-serif;
   font-size: clamp(2rem, 8vw, 7rem);
@@ -344,7 +344,7 @@
 }
 
 .home .wrapper .text .subtitle .content {
-  margin: 0px 5vh;
+  margin: 0px 2.5vh;
   color: #181818;
   font-family: "Kanit", sans-serif;
   font-size: clamp(1.2rem, 3vw, 2rem);
@@ -493,6 +493,225 @@
           animation: scrollAnimation 2s infinite linear;
 }
 
+.about {
+  margin: 0px 10vh;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .about {
+    margin: 0px 5vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .about {
+    margin: 0px 10px;
+  }
+}
+
+.about .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about .wrapper .about1, .about .wrapper .about2 {
+  padding: 20px 0px;
+}
+
+.about .wrapper .h2, .about .wrapper .p2, .about .wrapper .about2, .about .wrapper .q2 {
+  text-align: end;
+}
+
+.about .wrapper .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.about .wrapper .container .left {
+  -webkit-box-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.about .wrapper .container .left .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 2.5vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.about .wrapper .container .left .title .content {
+  display: inline-table;
+  margin: 0px 2.5vh;
+  color: #52f0fc;
+  font-family: "Kanit", sans-serif;
+  font-size: clamp(1.5rem, 5vw, 7rem);
+  font-weight: 500;
+}
+
+.about .wrapper .container .left .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 2.5vh;
+}
+
+.about .wrapper .container .left .text .aboutme {
+  margin: 0 0.41667vh;
+  color: #ffffff;
+  font-family: "Kanit", sans-serif;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-weight: 300;
+}
+
+.about .wrapper .container .right {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .about .wrapper .container .right {
+    display: none;
+  }
+}
+
+.about .wrapper .container .right .quote {
+  color: #181818;
+  font-family: "Shadows Into Light", cursive;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-weight: 200;
+  text-align: center;
+}
+
+@-webkit-keyframes leftToRight {
+  40% {
+    -webkit-transform: translate(50px, 0) scale(0.5);
+            transform: translate(50px, 0) scale(0.5);
+    opacity: 1;
+  }
+  60% {
+    color: #ffffff;
+  }
+  80% {
+    -webkit-transform: translate(0) scale(2);
+            transform: translate(0) scale(2);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translate(0) scale(1);
+            transform: translate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes leftToRight {
+  40% {
+    -webkit-transform: translate(50px, 0) scale(0.5);
+            transform: translate(50px, 0) scale(0.5);
+    opacity: 1;
+  }
+  60% {
+    color: #ffffff;
+  }
+  80% {
+    -webkit-transform: translate(0) scale(2);
+            transform: translate(0) scale(2);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translate(0) scale(1);
+            transform: translate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.about .animate span {
+  display: inline-block;
+}
+
+.about .titleAnimation span {
+  color: #52f0fc;
+  opacity: 0;
+  -webkit-transform: translate(-150px, 0) scale(0.3);
+          transform: translate(-150px, 0) scale(0.3);
+}
+
+.about .animate span {
+  -webkit-animation: leftToRight 1s forwards;
+          animation: leftToRight 1s forwards;
+}
+
+.about .aboutHTML, .about .quote, .about .aboutme {
+  opacity: 0;
+}
+
+.about .aboutHTML.animate, .about .quote.animate, .about .aboutme.animate {
+  -webkit-animation: fadeIn 3s linear forwards;
+          animation: fadeIn 3s linear forwards;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -504,6 +723,10 @@ body {
   margin: 0;
   padding: 0;
   background-color: #363636;
+}
+
+body .spacer {
+  height: 10vh;
 }
 
 body .html {
