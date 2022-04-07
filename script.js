@@ -1,5 +1,6 @@
 window.onscroll = function () {
     let aboutSection = isScrolledIntoView(document.getElementById("aboutAnimate"));
+    let skillsSection = isScrolledIntoView(document.getElementById("skillsAnimate"));
 
     //ABOUT ANIMATION TRIGGER
     if(aboutSection){
@@ -9,7 +10,17 @@ window.onscroll = function () {
         for(let i = 0; i < aboutHTML.length; i++){
             aboutHTML[i].classList.add('animate');
         }
+    }
+
+    //SKILLS ANIMATION TRIGGER
+    if(skillsSection){
+        skills.classList.add('animate');
+        skillsSkillsBoxes.classList.add('animate');
+        for(let i = 0; i < skillsHTML.length; i++){
+            skillsHTML[i].classList.add('animate');
         }
+    }
+
 };
 
 function isScrolledIntoView(el) {
@@ -51,7 +62,7 @@ function toggleMenu() {
     }
 }
 
-//HOME ANIMATION DELAY
+//HOME ANIMATION
 
 let x = document.getElementById('home-animationSlideIn');
 for(let i = 0; i < x.children.length; i++){
@@ -60,9 +71,10 @@ for(let i = 0; i < x.children.length; i++){
     }
 }
 
-//ABOUT ANIMATION DELAY
+//ABOUT ANIMATION
 
 let about = document.getElementById('about-animationLeftToRight');
+
 for(let i = 0; i < about.children.length; i++){
     if(about.children[i].localName === "span"){
         about.children[i].style.animationDelay = ((i * 0.07) + "s");
@@ -72,3 +84,24 @@ for(let i = 0; i < about.children.length; i++){
 let aboutHTML = document.getElementsByClassName('aboutHTML');
 let aboutQuote = document.getElementById('aboutQuote');
 let aboutAboutme = document.getElementById('aboutAboutme');
+
+//SKILLS ANIMATION
+
+let skills = document.getElementById('skills-animationLeftToRight');
+
+for(let i = 0; i < skills.children.length; i++){
+    if(skills.children[i].localName === "span"){
+        skills.children[i].style.animationDelay = ((i * 0.07) + "s");
+    }
+}
+
+let boxes = document.getElementById('skillsSkillsBoxes');
+
+for(let i = 0; i < boxes.children.length; i++){
+    if(boxes.children[i].localName === "div"){
+        boxes.children[i].style.animationDelay = ((i * 0.4) + "s");
+    }
+}
+
+let skillsHTML = document.getElementsByClassName('skillsHTML');
+let skillsSkillsBoxes = document.getElementById('skillsSkillsBoxes');

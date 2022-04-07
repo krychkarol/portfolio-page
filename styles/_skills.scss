@@ -1,0 +1,137 @@
+.skills{
+    @include margin();
+    z-index: 1;
+    display: flex;
+
+    .wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .skills1,.skills2{
+            padding: 20px 0px;
+        }
+
+        .h2,.d2,.skills2{
+            text-align: end;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+
+
+            .title{
+                display: flex;
+                flex-direction: column;
+                margin-left: $NavHeight/4;
+                width: fit-content;
+
+                .content{
+                    display: inline-table;
+                    margin: 0px $NavHeight/4;
+                    @include font($SkillsTitleSize,500,$Primary,$Blue);
+                }
+            }
+
+            .text{
+                display: flex;
+                flex-direction: column;
+                width: fit-content;
+                margin: 0 $NavHeight/4;
+
+                .skillsBoxes{
+                    margin: 0 $NavHeight/4;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    gap: 30px;
+
+                    div{
+                        height: 10vh;
+                        display: flex;
+
+                        img{
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+//ANIMATION
+
+    @keyframes leftToRight {
+        40% {
+            transform: translate(50px, 0) scale(.5);
+            opacity: 1;
+        }
+
+        60% {
+            color: $White;
+        }
+
+        80% {
+            transform: translate(0) scale(2);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translate(0) scale(1);
+            opacity: 1;
+        }
+    }
+    @keyframes topToBottom {
+        40% {
+            opacity: 1;
+        }
+
+        80% {
+            transform: translate(0) scale(1.2);
+        }
+
+        100% {
+            transform: translate(0) scale(1);
+            opacity: 1;
+        }
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .animate span {
+        display: inline-block;
+    }
+    .titleAnimation span {
+        color: $Blue;
+        opacity: 0;
+        transform: translate(-20px, 0) scale(.3);
+    }
+    .animate span{
+        animation: leftToRight 1s forwards;
+    }
+    .skillsHTML{
+        opacity: 0;
+    }
+    .skillsHTML.animate{
+        animation: fadeIn 3s linear forwards;
+    }
+    .skillsBoxes div {
+        display: inline-block;
+        opacity: 0;
+        transform: translate(0, -150px) scale(.3);
+    }
+    .skillsBoxes.animate div{
+        animation: topToBottom 1s forwards;
+    } 
+}

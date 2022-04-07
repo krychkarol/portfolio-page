@@ -46,7 +46,7 @@
                     margin: 0 $NavHeight/4;
 
                     .aboutme{
-                        margin: 0 $NavHeight/24;
+                        margin: 0 $NavHeight/4;
                         @include font($AboutTextSize,300,$Primary,$White);
                     }
                 }
