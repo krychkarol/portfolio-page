@@ -35,6 +35,12 @@
                 }
             }
 
+            .boxes{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
             .text{
                 display: flex;
                 flex-direction: column;
@@ -42,20 +48,23 @@
                 margin: 0 $NavHeight/4;
 
                 .skillsBoxes{
-                    margin: 0 $NavHeight/4;
+                    margin: 10px $NavHeight/4;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    justify-content: flex-start;
+                    justify-content: center;
                     flex-wrap: wrap;
                     gap: 30px;
 
                     div{
+                        width: 10vh;
                         height: 10vh;
                         display: flex;
 
                         img{
+                            width: 100%;
                             height: 100%;
+                            object-fit: contain;
                         }
                     }
                 }
