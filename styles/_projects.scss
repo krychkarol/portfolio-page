@@ -1,0 +1,203 @@
+.projects{
+    @include margin();
+    z-index: 1;
+    display: flex;
+    min-height: 80vh;
+
+    .wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .projects1,.projects2{
+            padding: 20px 0px;
+        }
+
+        .h2,.d2,.p2,.img2,.projects2{
+            text-align: end;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+
+
+            .title{
+                display: flex;
+                flex-direction: column;
+                margin-left: $NavHeight/4;
+                width: fit-content;
+
+                .content{
+                    display: inline-table;
+                    margin: 0px $NavHeight/4;
+                    @include font($ProjectsTitleSize,500,$Primary,$Blue);
+                }
+            }
+
+            .project1{
+                display: flex;
+                flex-direction: column;
+
+                .title{
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: $NavHeight/4;
+                    width: fit-content;
+    
+                    .content{
+                        display: inline-table;
+                        margin: 0px $NavHeight/4;
+                        @include font($ProjectsSubtitleSize,500,$Primary,$White);
+                    }
+                }
+
+                .details{
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0px $NavHeight/4;
+
+                    .content{
+                        margin: 0px $NavHeight/4;
+                        
+                        .main{
+                            display: flex;
+                            flex-direction: column;
+
+                            .text{
+                                @include font($ProjectsTextSize,400,$Primary,$White);
+                                margin: 0px $NavHeight/4;
+                            }
+                        }
+
+                        .additional{
+                            @media (max-width:#{$lg}) {
+                                flex-direction: column;
+                            }
+
+                            display: flex;
+                            flex-direction: row;
+                            gap: 5vw;
+
+                            .left{
+                                flex: 1;
+                                display: flex;
+                                flex-direction: column;
+                                width: fit-content;
+
+                                .text{
+                                    margin: 0px $NavHeight/4;
+                                    @include font($ProjectsTextSize,200,$Primary,$White);
+                                }
+                            }
+
+                            .right{
+                                flex: 1;
+                                display: flex;
+                                flex-direction: column;
+                                width: fit-content;
+
+                                img{
+                                    width: 100%;
+                                    height: auto;
+                                }
+                            }
+                        }
+
+                        .links{
+                            margin: 0px $NavHeight/4;
+                            text-align: center;
+                            a{
+                                transition: color 1s ease; 
+                                text-decoration: none;
+                                color: inherit;
+                                @include font($ProjectsTextSize,200,$Primary,$White);
+
+                                i{
+                                    padding-right: 5px;
+                                }
+                            }
+                            a:hover{
+                                color: $Blue;
+                                transition: color 1s ease; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+//ANIMATION
+
+    @keyframes leftToRight {
+        40% {
+            transform: translate(50px, 0) scale(.5);
+            opacity: 1;
+        }
+
+        60% {
+            color: $White;
+        }
+
+        80% {
+            transform: translate(0) scale(2);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translate(0) scale(1);
+            opacity: 1;
+        }
+    }
+    @keyframes topToBottom {
+        40% {
+            opacity: 1;
+        }
+
+        80% {
+            transform: translate(0) scale(1.2);
+        }
+
+        100% {
+            transform: translate(0) scale(1);
+            opacity: 1;
+        }
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .animate span, .animate1 span {
+        display: inline-block;
+    }
+    .titleAnimation span {
+        color: $Blue;
+        opacity: 0;
+        transform: translate(-20px, 0) scale(.3);
+    }
+    .title1Animation span {
+        color: $White;
+        opacity: 0;
+        transform: translate(0, -150px) scale(.3);
+    }
+    .animate span{
+        animation: leftToRight 1s forwards;
+    }
+    .animate1 span{
+        animation: topToBottom 2s forwards;
+    }
+
+    .projectsHTML, .project1HTML, .main, .left, .right, .links{
+        opacity: 0;
+    }
+    .projectsHTML.animate, .project1HTML.animate, .main.animate2, .left.animate2, .right.animate2, .links.animate2{
+        animation: fadeIn 3s linear forwards;
+    }
+}

@@ -2,7 +2,7 @@
 
 .navbar{
     z-index: 99;
-    @include font(($NavHeight / 3),600,$Primary,$Light);
+    @include font(($NavHeight / 4),600,$Primary,$Light);
     height: $NavHeight;
     width: 100%;
     position: fixed;
@@ -16,7 +16,7 @@
 
     .logo{
         height: $NavHeight;
-        width: $NavHeight;
+        width: auto;
         background-color: $NavBackgroundDark;
         border-right: 2px solid $Background;
         transition: all 1s ease;
@@ -31,7 +31,7 @@
         background-color: $Light;
 
         img{
-           transform: scale(1.2) rotatey(180deg); 
+           transform: rotatey(180deg); 
         }
     }
 

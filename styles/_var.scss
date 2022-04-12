@@ -12,7 +12,7 @@ $Secondary: 'Shadows Into Light', cursive;
     font-weight: $weight;
 }
 
-$HomeTitleSize: clamp(2rem, 8vw, 7rem);
+$HomeTitleSize: clamp(2rem, 6vw, 7rem);
 $HomeSubtitleSize: clamp(1.2rem, 3vw, 2rem);
 $HTMLSize: clamp(0.8rem, 2vw, 1rem);
 
@@ -21,6 +21,10 @@ $AboutTextSize: clamp(1.2rem, 2vw, 2rem);
 
 $SkillsTitleSize: clamp(2.5rem, 5vw, 7rem);
 $SkillsBox: clamp(2rem, 5rem, 5rem);
+
+$ProjectsTitleSize: clamp(2.5rem, 5vw, 7rem);
+$ProjectsSubtitleSize: clamp(1.25rem, 2.5vw, 3.5rem);
+$ProjectsTextSize: clamp(1.5rem, 1.5vw, 2rem);
 
 //COLORS
 $Background: #363636;
@@ -35,6 +39,7 @@ $Red: #ff0000;
 $JS: #F0DB4F;
 $CSS: #264de4;
 $React: #61DBFB;
+$HTML5: #e34c26;
 
 //VARIABLES
 $NavHeight: 10vh;

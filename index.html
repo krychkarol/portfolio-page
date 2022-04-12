@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
         <div class="navbar">
             <!-- Logo -->
             <div class="logo">
-                <img src="./img/K2.png" alt="">
+                <img src="./img/logo/K_logo.png" alt="">
             </div>
             <!-- Menu -->
             <div class="menu">
@@ -52,22 +53,31 @@
                         <span class="h1 html">&lt;h1&gt;</span>
                         <div class="content animate titleAnimation" id="home-animationSlideIn">
                             <span>H</span>
-                            <span>i</span>
-                            <span>,</span><br>
+                            <span>e</span>
+                            <span>l</span>
+                            <span>l</span>
+                            <span>o</span>
+                            <span>&nbsp;</span>
+                            <span>!</span><br>
                             <span>I</span>
                             <span>'</span>
                             <span>m</span>
                             <span>&nbsp;</span>
-                            <span><img src="./img/K2_letter.png" alt=""></span>
+                            <span class="letter">K</span>
                             <span>a</span>
                             <span>r</span>
                             <span>o</span>
-                            <span>l</span>
-                            <span>,</span><br>
-                            <span>w</span>
+                            <span>l</span><br>
+                            <span>F</span>
+                            <span>r</span>
+                            <span>o</span>
+                            <span>n</span>
+                            <span>t</span>
+                            <span>-</span>
                             <span>e</span>
-                            <span>b</span>
-                            <span>&nbsp;</span>
+                            <span>n</span>
+                            <span>d</span>
+                            <span> </span>
                             <span>d</span>
                             <span>e</span>
                             <span>v</span>
@@ -84,6 +94,8 @@
                         <span class="p1 html">&lt;p&gt;</span>
                         <div class="content subtitleAnimation">
                             <span class="js">JavaScript</span>
+                            <span class="space">/</span>
+                            <span class="html5">HTML</span>
                             <span class="space">/</span>
                             <span class="css">CSS</span>
                             <span class="space">/</span>
@@ -106,7 +118,7 @@
     <div class="spacer"></div>
 
     <!-- ABOUT -->
-        <section class="about" id="aboutAnimate">
+        <section class="about">
             <div class="wrapper">
                 <span class="html about1 aboutHTML">&lt;about&gt;</span>
                 <div class="container">
@@ -123,7 +135,7 @@
                             <span class="html h2 aboutHTML">&lt;/h1&gt;</span>
                         </div>
                         <div class="text">
-                            <span class="html p1 aboutHTML">&lt;p&gt;</span>
+                            <span class="html p1 aboutHTML" id="aboutAnimate">&lt;p&gt;</span>
                             <span class="aboutme" id="aboutAboutme">
                                 Hello ! My name is Karol and I&nbsp;am fascinated by latest technologies and web development. 
                                 I&nbsp;am at the beginning of my journey with programming, 
@@ -164,9 +176,9 @@
                     </div>
                     <div class="boxes">
                         <div class="text">
-                            <span class="html d1 skillsHTML" >&lt;div&gt;</span>
+                            <span class="html d1 skillsHTML" id="skillsAnimate">&lt;div&gt;</span>
                             <div class="skillsBoxes" id="skillsSkillsBoxes">
-                                <div><img src="./img/logos/JavaScript_logo.png" alt="" id="skillsAnimate"></div>
+                                <div><img src="./img/logos/JavaScript_logo.png" alt=""></div>
                                 <div><img src="./img/logos/HTML5_logo.png" alt=""></div>
                                 <div><img src="./img/logos/CSS3_logo.png" alt=""></div>
                                 <div><img src="./img/logos/React_logo.png" alt=""></div>
@@ -182,6 +194,93 @@
             </div>
         </section>
     <!-- /SKILLS -->
+
+    <div class="spacer"></div>
+
+    <!-- PROJECTS -->
+        <section class="projects">
+            <div class="wrapper">
+                <span class="html projects1 projectsHTML">&lt;projects&gt;</span>
+                <div class="container">
+                    <div class="title">
+                        <span class="html h1 projectsHTML">&lt;h1&gt;</span>
+                        <div class="content titleAnimation" id="projects-animationLeftToRight">
+                            <span>P</span>
+                            <span>r</span>
+                            <span>o</span>
+                            <span>j</span>
+                            <span>e</span>
+                            <span>c</span>
+                            <span>t</span>
+                            <span>s</span>
+                        </div>
+                        <span class="html h2 projectsHTML" id="projectsAnimate">&lt;/h1&gt;</span>
+                    </div>
+                    <div class="project1">
+                        <div class="title">
+                            <span class="html h1 project1HTML">&lt;h2&gt;</span>
+                            <div class="content title1Animation" id="project1-animationLeftToRight">
+                                <span>E</span>
+                                <span>-</span>
+                                <span>Commerce</span>
+                                <span>&nbsp;</span>
+                                <span>App</span>
+                            </div>
+                            <span class="html h2 project1HTML" id="project1TitleAnimate">&lt;/h2&gt;</span>
+                        </div>
+                        <div class="details">
+                            <span class="html d1 project1HTML">&lt;div&gt;</span>
+                            <div class="content">
+                                <div class="main" id="project1General">
+                                    <span class="html p1 project1HTML">&lt;general&gt;</span>
+                                    <div class="text">                                  
+                                        An online web store application with login / register users, 
+                                        shopping cart, products search, payment method and an admin panel that allows you to manage products, 
+                                        orders, users or even a carousel, categories.
+                                    </div>
+                                    <span class="html p2 project1HTML" id="project1GeneralAnimate">&lt;general&gt;</span> 
+                                </div>
+                                <div class="additional">
+                                    <div class="left" id="project1Details">
+                                        <span class="html p1 project1HTMLdetails">&lt;details&gt;</span>
+                                        <div class="text" >                                        
+                                            Full stack MERN app. <br>
+                                            Frontend built with React.js.<br>
+                                            REST API created using Node.js, Express.js and connected to MongoDB.
+                                        </div>
+                                        <span class="html p2 project1HTMLdetails" id="project1DetailsAnimate">&lt;details&gt;</span> 
+                                    </div>
+                                    <div class="right" id="project1Img">
+                                        <span class="html img1 project1HTMLdetails" id="project1ImgAnimate">&lt;img&gt;</span>
+                                        <img src="./img//projects/mix.png" alt="" >
+                                        <span class="html img2 project1HTMLdetails">&lt;img&gt;</span>
+                                    </div>
+                                </div>
+                                <div class="links" id="project1Links">
+                                    <a href="#">
+                                        <i class="fa fa-github"></i> See code
+                                    </a>
+                                </div>
+                            </div>
+                            <span class="html d2 project1HTML">&lt;/div&gt;</span>
+                        </div>
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="project1">
+                        <div class="title">
+                            <span class="html h1 project2HTML">&lt;h2&gt;</span>
+                            <div class="content">
+                                <span>more projects coming soon</span>
+                            </div>
+                            <span class="html h2 project2HTML">&lt;/h2&gt;</span>
+                        </div>
+                    </div>
+                <span class="html projects2 projectsHTML">&lt;/projects&gt;</span>
+            </div>
+        </section>
+    <!-- /PROJECTS -->
 
     <div class="spacer"></div>
 

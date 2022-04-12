@@ -2,6 +2,7 @@
     @include margin();
     z-index: 1;
     display: flex;
+    min-height: 80vh;
 
     .wrapper{
         width: 100%;
@@ -40,37 +41,37 @@
                 align-items: center;
                 justify-content: center;
                 width: 100%;
-            }
-            .text{
-                display: flex;
-                flex-direction: column;
-                width: fit-content;
-                margin: 0 $NavHeight/4;
 
-                .skillsBoxes{
-                    margin: 10px $NavHeight/4;
+                .text{
                     display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                    gap: 30px;
+                    flex-direction: column;
+                    width: fit-content;
+                    margin: 0 $NavHeight/4;
 
-                    div{
-                        width: 10vh;
-                        height: 10vh;
+                    .skillsBoxes{
+                        margin: 10px $NavHeight/4;
                         display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        gap: 30px;
 
-                        img{
-                            width: 100%;
-                            height: 100%;
-                            object-fit: contain;
+                        div{
+                            width: 10vh;
+                            height: 10vh;
+                            display: flex;
+
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
                         }
                     }
                 }
             }
-        }
-        
+        } 
     }
 
 //ANIMATION

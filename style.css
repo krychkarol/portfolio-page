@@ -6,7 +6,7 @@
   z-index: 99;
   color: #bebebe;
   font-family: "Kanit", sans-serif;
-  font-size: 3.33333vh;
+  font-size: 2.5vh;
   font-weight: 600;
   height: 10vh;
   width: 100%;
@@ -30,7 +30,7 @@
 
 .navbar .logo {
   height: 10vh;
-  width: 10vh;
+  width: auto;
   background-color: #181818;
   border-right: 2px solid #363636;
   -webkit-transition: all 1s ease;
@@ -49,8 +49,8 @@
 }
 
 .navbar .logo:hover img {
-  -webkit-transform: scale(1.2) rotatey(180deg);
-          transform: scale(1.2) rotatey(180deg);
+  -webkit-transform: rotatey(180deg);
+          transform: rotatey(180deg);
 }
 
 .navbar .menu {
@@ -322,12 +322,13 @@
   margin: 0px 2.5vh;
   color: #ffffff;
   font-family: "Kanit", sans-serif;
-  font-size: clamp(2rem, 8vw, 7rem);
+  font-size: clamp(2rem, 6vw, 7rem);
   font-weight: 600;
 }
 
-.home .wrapper .text .title .content img {
-  height: clamp(2rem, 8vw, 7rem);
+.home .wrapper .text .title .content .letter {
+  color: #52f0fc !important;
+  text-shadow: 5px 2px #000000;
 }
 
 .home .wrapper .text .subtitle {
@@ -351,12 +352,12 @@
   font-weight: 400;
 }
 
-.home .wrapper .text .subtitle .content .js, .home .wrapper .text .subtitle .content .css, .home .wrapper .text .subtitle .content .react {
+.home .wrapper .text .subtitle .content .js, .home .wrapper .text .subtitle .content .css, .home .wrapper .text .subtitle .content .react, .home .wrapper .text .subtitle .content .html5 {
   -webkit-transition: color 1s ease;
   transition: color 1s ease;
 }
 
-.home .wrapper .text .subtitle .content .js:hover, .home .wrapper .text .subtitle .content .css:hover, .home .wrapper .text .subtitle .content .react:hover {
+.home .wrapper .text .subtitle .content .js:hover, .home .wrapper .text .subtitle .content .css:hover, .home .wrapper .text .subtitle .content .react:hover, .home .wrapper .text .subtitle .content .html5:hover {
   -webkit-transition: color 1s ease;
   transition: color 1s ease;
 }
@@ -371,6 +372,10 @@
 
 .home .wrapper .text .subtitle .content .react:hover {
   color: #61DBFB;
+}
+
+.home .wrapper .text .subtitle .content .html5:hover {
+  color: #e34c26;
 }
 
 @-webkit-keyframes sideIn {
@@ -499,6 +504,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: 80vh;
 }
 
 @media (max-width: 768px) {
@@ -718,6 +724,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: 80vh;
 }
 
 @media (max-width: 768px) {
@@ -800,7 +807,7 @@
   width: 100%;
 }
 
-.skills .wrapper .container .text {
+.skills .wrapper .container .boxes .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -814,7 +821,7 @@
   margin: 0 2.5vh;
 }
 
-.skills .wrapper .container .text .skillsBoxes {
+.skills .wrapper .container .boxes .text .skillsBoxes {
   margin: 10px 2.5vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -834,7 +841,7 @@
   gap: 30px;
 }
 
-.skills .wrapper .container .text .skillsBoxes div {
+.skills .wrapper .container .boxes .text .skillsBoxes div {
   width: 10vh;
   height: 10vh;
   display: -webkit-box;
@@ -842,7 +849,7 @@
   display: flex;
 }
 
-.skills .wrapper .container .text .skillsBoxes div img {
+.skills .wrapper .container .boxes .text .skillsBoxes div img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -944,6 +951,321 @@
 .skills .skillsBoxes.animate div {
   -webkit-animation: topToBottom 1s forwards;
           animation: topToBottom 1s forwards;
+}
+
+.projects {
+  margin: 0px 10vh;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 80vh;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    margin: 0px 5vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .projects {
+    margin: 0px 10px;
+  }
+}
+
+.projects .wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.projects .wrapper .projects1, .projects .wrapper .projects2 {
+  padding: 20px 0px;
+}
+
+.projects .wrapper .h2, .projects .wrapper .d2, .projects .wrapper .p2, .projects .wrapper .img2, .projects .wrapper .projects2 {
+  text-align: end;
+}
+
+.projects .wrapper .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projects .wrapper .container .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 2.5vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.projects .wrapper .container .title .content {
+  display: inline-table;
+  margin: 0px 2.5vh;
+  color: #52f0fc;
+  font-family: "Kanit", sans-serif;
+  font-size: clamp(2.5rem, 5vw, 7rem);
+  font-weight: 500;
+}
+
+.projects .wrapper .container .project1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projects .wrapper .container .project1 .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 2.5vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.projects .wrapper .container .project1 .title .content {
+  display: inline-table;
+  margin: 0px 2.5vh;
+  color: #ffffff;
+  font-family: "Kanit", sans-serif;
+  font-size: clamp(1.25rem, 2.5vw, 3.5rem);
+  font-weight: 500;
+}
+
+.projects .wrapper .container .project1 .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0px 2.5vh;
+}
+
+.projects .wrapper .container .project1 .details .content {
+  margin: 0px 2.5vh;
+}
+
+.projects .wrapper .container .project1 .details .content .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projects .wrapper .container .project1 .details .content .main .text {
+  color: #ffffff;
+  font-family: "Kanit", sans-serif;
+  font-size: clamp(1.5rem, 1.5vw, 2rem);
+  font-weight: 400;
+  margin: 0px 2.5vh;
+}
+
+.projects .wrapper .container .project1 .details .content .additional {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 5vw;
+}
+
+@media (max-width: 992px) {
+  .projects .wrapper .container .project1 .details .content .additional {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.projects .wrapper .container .project1 .details .content .additional .left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.projects .wrapper .container .project1 .details .content .additional .left .text {
+  margin: 0px 2.5vh;
+  color: #ffffff;
+  font-family: "Kanit", sans-serif;
+  font-size: clamp(1.5rem, 1.5vw, 2rem);
+  font-weight: 200;
+}
+
+.projects .wrapper .container .project1 .details .content .additional .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.projects .wrapper .container .project1 .details .content .additional .right img {
+  width: 100%;
+  height: auto;
+}
+
+.projects .wrapper .container .project1 .details .content .links {
+  margin: 0px 2.5vh;
+  text-align: center;
+}
+
+.projects .wrapper .container .project1 .details .content .links a {
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+  text-decoration: none;
+  color: inherit;
+  color: #ffffff;
+  font-family: "Kanit", sans-serif;
+  font-size: clamp(1.5rem, 1.5vw, 2rem);
+  font-weight: 200;
+}
+
+.projects .wrapper .container .project1 .details .content .links a i {
+  padding-right: 5px;
+}
+
+.projects .wrapper .container .project1 .details .content .links a:hover {
+  color: #52f0fc;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+}
+
+@keyframes leftToRight {
+  40% {
+    -webkit-transform: translate(50px, 0) scale(0.5);
+            transform: translate(50px, 0) scale(0.5);
+    opacity: 1;
+  }
+  60% {
+    color: #ffffff;
+  }
+  80% {
+    -webkit-transform: translate(0) scale(2);
+            transform: translate(0) scale(2);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translate(0) scale(1);
+            transform: translate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes topToBottom {
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0) scale(1.2);
+            transform: translate(0) scale(1.2);
+  }
+  100% {
+    -webkit-transform: translate(0) scale(1);
+            transform: translate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.projects .animate span, .projects .animate1 span {
+  display: inline-block;
+}
+
+.projects .titleAnimation span {
+  color: #52f0fc;
+  opacity: 0;
+  -webkit-transform: translate(-20px, 0) scale(0.3);
+          transform: translate(-20px, 0) scale(0.3);
+}
+
+.projects .title1Animation span {
+  color: #ffffff;
+  opacity: 0;
+  -webkit-transform: translate(0, -150px) scale(0.3);
+          transform: translate(0, -150px) scale(0.3);
+}
+
+.projects .animate span {
+  -webkit-animation: leftToRight 1s forwards;
+          animation: leftToRight 1s forwards;
+}
+
+.projects .animate1 span {
+  -webkit-animation: topToBottom 2s forwards;
+          animation: topToBottom 2s forwards;
+}
+
+.projects .projectsHTML, .projects .project1HTML, .projects .main, .projects .left, .projects .right, .projects .links {
+  opacity: 0;
+}
+
+.projects .projectsHTML.animate, .projects .project1HTML.animate, .projects .main.animate2, .projects .left.animate2, .projects .right.animate2, .projects .links.animate2 {
+  -webkit-animation: fadeIn 3s linear forwards;
+          animation: fadeIn 3s linear forwards;
 }
 
 body {

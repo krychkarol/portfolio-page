@@ -50,8 +50,9 @@
                     margin: 0px $NavHeight/4;
                     @include font($HomeTitleSize,600,$Primary,$White);
 
-                    img{
-                        height:$HomeTitleSize;
+                    .letter{
+                        color:$Blue !important;
+                        text-shadow: 5px 2px $Black;
                     }
                 }
             }
@@ -65,10 +66,10 @@
                     margin: 0px $NavHeight/4;
                     @include font($HomeSubtitleSize,400,$Primary,$NavBackgroundDark);
 
-                    .js,.css,.react{
+                    .js,.css,.react,.html5{
                         transition: color 1s ease; 
                     }
-                    .js:hover,.css:hover,.react:hover{
+                    .js:hover,.css:hover,.react:hover,.html5:hover{
                         transition: color 1s ease; 
                     }
                     .js:hover{
@@ -79,6 +80,9 @@
                     }
                     .react:hover{
                         color: $React;
+                    }
+                    .html5:hover{
+                        color: $HTML5;
                     }
                 }
             }
