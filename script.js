@@ -8,6 +8,8 @@ window.onscroll = function () {
     let project1Details = isScrolledIntoView(document.getElementById('project1DetailsAnimate'));
     let project1Img = isScrolledIntoView(document.getElementById('project1ImgAnimate'));
 
+    let project2Title = isScrolledIntoView(document.getElementById('project2TitleAnimate'));
+
     //ABOUT ANIMATION TRIGGER
     if(aboutSection){
         about.classList.add('animate');
@@ -33,7 +35,7 @@ window.onscroll = function () {
         for(let i = 0; i < projectsHTML.length; i++){
             projectsHTML[i].classList.add('animate');
         }
-
+    }
         //PROJECT 1 TITLE
         if(project1Title){
             project1.classList.add('animate1');
@@ -54,7 +56,13 @@ window.onscroll = function () {
             project1Image.classList.add('animate2');
             project1Link.classList.add('animate2');
         }
-    }
+        //PROJECT 2 TITLE
+        if(project2Title){
+            project2.classList.add('animate1');
+            for(let i = 0; i < project2HTML.length; i++){
+                project2HTML[i].classList.add('animate');
+            }
+        }
 
 };
 
@@ -63,7 +71,7 @@ function isScrolledIntoView(el) {
     var elemTop = rect.top;
     var elemBottom = rect.bottom;
 
-    var isVisible = (elemBottom <= window.innerHeight);
+    var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
     //(elemTop >= 0) && 
     return isVisible;
 }
@@ -169,3 +177,15 @@ let project1GeneralText = document.getElementById('project1General');
 let project1DetailsText = document.getElementById('project1Details');
 let project1Image = document.getElementById('project1Img');
 let project1Link = document.getElementById('project1Links');
+
+//PROJECT 2 
+
+let project2 = document.getElementById('project2-animationLeftToRight');
+
+for(let i = 0; i < project2.children.length; i++){
+    if(project2.children[i].localName === 'span'){
+        project2.children[i].style.animationDelay = ((i * 0.07) + 's');
+    }
+}
+
+let project2HTML = document.getElementsByClassName('project2HTML');

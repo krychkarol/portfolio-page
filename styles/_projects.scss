@@ -36,7 +36,7 @@
                 }
             }
 
-            .project1{
+            .project1,.project2{
                 display: flex;
                 flex-direction: column;
 
@@ -182,7 +182,7 @@
         opacity: 0;
         transform: translate(-20px, 0) scale(.3);
     }
-    .title1Animation span {
+    .title1Animation span, .title2Animation span {
         color: $White;
         opacity: 0;
         transform: translate(0, -150px) scale(.3);
@@ -194,10 +194,10 @@
         animation: topToBottom 2s forwards;
     }
 
-    .projectsHTML, .project1HTML, .main, .left, .right, .links{
+    .projectsHTML, .project1HTML, .project2HTML, .main, .left, .right, .links{
         opacity: 0;
     }
-    .projectsHTML.animate, .project1HTML.animate, .main.animate2, .left.animate2, .right.animate2, .links.animate2{
+    .projectsHTML.animate, .project1HTML.animate, .project2HTML.animate, .main.animate2, .left.animate2, .right.animate2, .links.animate2{
         animation: fadeIn 3s linear forwards;
     }
 }

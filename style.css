@@ -331,6 +331,10 @@
   text-shadow: 5px 2px #000000;
 }
 
+.home .wrapper .text .title .content img {
+  height: clamp(2rem, 6vw, 7rem);
+}
+
 .home .wrapper .text .subtitle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1029,7 +1033,7 @@
   font-weight: 500;
 }
 
-.projects .wrapper .container .project1 {
+.projects .wrapper .container .project1, .projects .wrapper .container .project2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1039,7 +1043,7 @@
           flex-direction: column;
 }
 
-.projects .wrapper .container .project1 .title {
+.projects .wrapper .container .project1 .title, .projects .wrapper .container .project2 .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1053,7 +1057,7 @@
   width: fit-content;
 }
 
-.projects .wrapper .container .project1 .title .content {
+.projects .wrapper .container .project1 .title .content, .projects .wrapper .container .project2 .title .content {
   display: inline-table;
   margin: 0px 2.5vh;
   color: #ffffff;
@@ -1062,7 +1066,7 @@
   font-weight: 500;
 }
 
-.projects .wrapper .container .project1 .details {
+.projects .wrapper .container .project1 .details, .projects .wrapper .container .project2 .details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1073,11 +1077,11 @@
   margin: 0px 2.5vh;
 }
 
-.projects .wrapper .container .project1 .details .content {
+.projects .wrapper .container .project1 .details .content, .projects .wrapper .container .project2 .details .content {
   margin: 0px 2.5vh;
 }
 
-.projects .wrapper .container .project1 .details .content .main {
+.projects .wrapper .container .project1 .details .content .main, .projects .wrapper .container .project2 .details .content .main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1087,7 +1091,7 @@
           flex-direction: column;
 }
 
-.projects .wrapper .container .project1 .details .content .main .text {
+.projects .wrapper .container .project1 .details .content .main .text, .projects .wrapper .container .project2 .details .content .main .text {
   color: #ffffff;
   font-family: "Kanit", sans-serif;
   font-size: clamp(1.5rem, 1.5vw, 2rem);
@@ -1095,7 +1099,7 @@
   margin: 0px 2.5vh;
 }
 
-.projects .wrapper .container .project1 .details .content .additional {
+.projects .wrapper .container .project1 .details .content .additional, .projects .wrapper .container .project2 .details .content .additional {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1107,7 +1111,7 @@
 }
 
 @media (max-width: 992px) {
-  .projects .wrapper .container .project1 .details .content .additional {
+  .projects .wrapper .container .project1 .details .content .additional, .projects .wrapper .container .project2 .details .content .additional {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1115,7 +1119,7 @@
   }
 }
 
-.projects .wrapper .container .project1 .details .content .additional .left {
+.projects .wrapper .container .project1 .details .content .additional .left, .projects .wrapper .container .project2 .details .content .additional .left {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -1131,7 +1135,7 @@
   width: fit-content;
 }
 
-.projects .wrapper .container .project1 .details .content .additional .left .text {
+.projects .wrapper .container .project1 .details .content .additional .left .text, .projects .wrapper .container .project2 .details .content .additional .left .text {
   margin: 0px 2.5vh;
   color: #ffffff;
   font-family: "Kanit", sans-serif;
@@ -1139,7 +1143,7 @@
   font-weight: 200;
 }
 
-.projects .wrapper .container .project1 .details .content .additional .right {
+.projects .wrapper .container .project1 .details .content .additional .right, .projects .wrapper .container .project2 .details .content .additional .right {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -1155,17 +1159,17 @@
   width: fit-content;
 }
 
-.projects .wrapper .container .project1 .details .content .additional .right img {
+.projects .wrapper .container .project1 .details .content .additional .right img, .projects .wrapper .container .project2 .details .content .additional .right img {
   width: 100%;
   height: auto;
 }
 
-.projects .wrapper .container .project1 .details .content .links {
+.projects .wrapper .container .project1 .details .content .links, .projects .wrapper .container .project2 .details .content .links {
   margin: 0px 2.5vh;
   text-align: center;
 }
 
-.projects .wrapper .container .project1 .details .content .links a {
+.projects .wrapper .container .project1 .details .content .links a, .projects .wrapper .container .project2 .details .content .links a {
   -webkit-transition: color 1s ease;
   transition: color 1s ease;
   text-decoration: none;
@@ -1176,11 +1180,11 @@
   font-weight: 200;
 }
 
-.projects .wrapper .container .project1 .details .content .links a i {
+.projects .wrapper .container .project1 .details .content .links a i, .projects .wrapper .container .project2 .details .content .links a i {
   padding-right: 5px;
 }
 
-.projects .wrapper .container .project1 .details .content .links a:hover {
+.projects .wrapper .container .project1 .details .content .links a:hover, .projects .wrapper .container .project2 .details .content .links a:hover {
   color: #52f0fc;
   -webkit-transition: color 1s ease;
   transition: color 1s ease;
@@ -1242,7 +1246,7 @@
           transform: translate(-20px, 0) scale(0.3);
 }
 
-.projects .title1Animation span {
+.projects .title1Animation span, .projects .title2Animation span {
   color: #ffffff;
   opacity: 0;
   -webkit-transform: translate(0, -150px) scale(0.3);
@@ -1259,11 +1263,11 @@
           animation: topToBottom 2s forwards;
 }
 
-.projects .projectsHTML, .projects .project1HTML, .projects .main, .projects .left, .projects .right, .projects .links {
+.projects .projectsHTML, .projects .project1HTML, .projects .project2HTML, .projects .main, .projects .left, .projects .right, .projects .links {
   opacity: 0;
 }
 
-.projects .projectsHTML.animate, .projects .project1HTML.animate, .projects .main.animate2, .projects .left.animate2, .projects .right.animate2, .projects .links.animate2 {
+.projects .projectsHTML.animate, .projects .project1HTML.animate, .projects .project2HTML.animate, .projects .main.animate2, .projects .left.animate2, .projects .right.animate2, .projects .links.animate2 {
   -webkit-animation: fadeIn 3s linear forwards;
           animation: fadeIn 3s linear forwards;
 }
