@@ -1,0 +1,144 @@
+.contact{
+    @include margin();
+    z-index: 1;
+    display: flex;
+    min-height: 80vh;
+    
+
+    .wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .contact1,.contact2{
+            padding: 20px 0px;
+        }
+
+        .h2,.form2,.contact2{
+            text-align: end;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+
+
+            .title{
+                display: flex;
+                flex-direction: column;
+                margin-left: $NavHeight/4;
+                width: fit-content;
+
+                .content{
+                    display: inline-table;
+                    margin: 0px $NavHeight/4;
+                    @include font($ContactTitleSize,500,$Primary,$Blue);
+                }
+            }
+
+            .form{
+                display: flex;
+                flex-direction: column;
+                margin: 0 $NavHeight/4;
+
+                form{
+                    display: flex;
+                    flex-direction: column;
+
+                    label{
+                        padding-left: 20px;
+                        @include font($ContactLabelSize,400,$Primary,$White);
+                    }
+                    input{
+                        padding: 5px 10px;
+                        height: $ContactInputSize;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid $White;
+                        margin-bottom: 20px;
+                        @include font($ContactInputSize,200,$Primary,$White);
+                    }
+                    input[type=submit]{
+                        background-color: $Blue;
+                        border: none;
+                        width: 50%;
+                        min-width: fit-content;
+                        margin : 10px auto;
+                        border-radius: 10px;
+                        @include font($ContactInputSize,300,$Primary,$Black);
+                        height: fit-content;
+                        cursor: pointer;
+                        border: solid 2px transparent;
+                        transition: all 1s ease;
+                    }
+                    input[type=submit]:hover{
+                        background-color: $Background;
+                        border: solid 2px $Blue;
+                        color: $White;
+                        transition: all 1s ease;
+                    }
+                    textarea{
+                        margin-top: 10px;
+                        height: 150px;
+                        padding: 10px;
+                        background-color: rgba($color: #ffffff, $alpha: 0.1);
+                        border: none;
+                        resize: none;
+                        border-radius: 10px;
+                        color: $White;
+                        @include font($ContactInputSize,200,$Primary,$White);
+                    }
+                }
+            }
+        }
+    }
+//ANIMATION
+
+    @keyframes leftToRight {
+        40% {
+            transform: translate(50px, 0) scale(.5);
+            opacity: 1;
+        }
+
+        60% {
+            color: $White;
+        }
+
+        80% {
+            transform: translate(0) scale(2);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translate(0) scale(1);
+            opacity: 1;
+        }
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .animate span {
+        display: inline-block;
+    }
+    .titleAnimation span {
+        color: $Blue;
+        opacity: 0;
+        transform: translate(-20px, 0) scale(.3);
+    }
+    .animate span{
+        animation: leftToRight 1s forwards;
+    }
+    .contactHTML, form{
+        opacity: 0;
+    }
+    .contactHTML.animate, form.animate{
+        animation: fadeIn 3s linear forwards;
+    }
+}

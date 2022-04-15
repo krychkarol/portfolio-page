@@ -10,6 +10,8 @@ window.onscroll = function () {
 
     let project2Title = isScrolledIntoView(document.getElementById('project2TitleAnimate'));
 
+    let contactSection = isScrolledIntoView(document.getElementById('contactAnimate'));
+
     //ABOUT ANIMATION TRIGGER
     if(aboutSection){
         about.classList.add('animate');
@@ -63,6 +65,15 @@ window.onscroll = function () {
                 project2HTML[i].classList.add('animate');
             }
         }
+
+    //CONTACT ANIMATION TRIGGER
+    if(contactSection){
+        contact.classList.add('animate');
+        form.classList.add('animate');
+        for(let i = 0; i < contactHTML.length; i++){
+            contactHTML[i].classList.add('animate');
+        }
+    }
 
 };
 
@@ -189,3 +200,16 @@ for(let i = 0; i < project2.children.length; i++){
 }
 
 let project2HTML = document.getElementsByClassName('project2HTML');
+
+//CONTACT
+
+let contact = document.getElementById('contact-animationLeftToRight');
+
+for(let i = 0; i < contact.children.length; i++){
+    if(contact.children[i].localName === 'span'){
+        contact.children[i].style.animationDelay = ((i * 0.07) + 's');
+    }
+}
+
+let contactHTML = document.getElementsByClassName('contactHTML');
+let form = document.getElementById('contact-form');

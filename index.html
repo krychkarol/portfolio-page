@@ -7,6 +7,26 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('MKtgsWst6jbuRyA2a');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('gmail', 'template_1tjxxye', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 <body>
     <!-- NAV -->
@@ -293,6 +313,48 @@
             </div>
         </section>
     <!-- /PROJECTS -->
+
+    <div class="spacer"></div>
+
+    <!-- CONTACT FORM -->
+    <section class="contact">
+        <div class="wrapper">
+            <span class="html contact1 contactHTML">&lt;contact&gt;</span>
+            <div class="container">
+                <div class="title">
+                    <span class="html h1 contactHTML">&lt;h1&gt;</span>
+                    <div class="content titleAnimation" id="contact-animationLeftToRight">
+                        <span>C</span>
+                        <span>o</span>
+                        <span>n</span>
+                        <span>t</span>
+                        <span>a</span>
+                        <span>c</span>
+                        <span>t</span>
+                    </div>
+                    <span class="html h2 contactHTML">&lt;/h1&gt;</span>
+                </div>
+                <div class="form">
+                    <span class="html form1 contactHTML" id="contactAnimate">&lt;form&gt;</span>
+                    <form id="contact-form">
+                        <input type="hidden" name="contact_number">
+                        <label>Name</label>
+                        <input type="text" name="user_name">
+                        <label>Email</label>
+                        <input type="email" name="user_email">
+                        <label>Message</label>
+                        <textarea name="message"></textarea>
+                        <input type="submit" value="Send">
+                    </form>
+                    <span class="html form2 contactHTML">&lt;/form&gt;</span>
+                </div>
+            </div>
+            <span class="html contact2 contactHTML">&lt;/contact&gt;</span>
+        
+        </div>
+    </section>
+    
+    <!-- /CONTACT FORM -->
 
     <div class="spacer"></div>
 
