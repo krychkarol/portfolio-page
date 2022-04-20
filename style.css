@@ -224,6 +224,7 @@
 
 .home {
   margin: 0px 10vh;
+  scroll-margin: 10vh;
   height: 90vh;
   z-index: 1;
   position: relative;
@@ -504,6 +505,7 @@
 
 .about {
   margin: 0px 10vh;
+  scroll-margin: 10vh;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -724,6 +726,7 @@
 
 .skills {
   margin: 0px 10vh;
+  scroll-margin: 10vh;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -959,6 +962,7 @@
 
 .projects {
   margin: 0px 10vh;
+  scroll-margin: 10vh;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1274,6 +1278,7 @@
 
 .contact {
   margin: 0px 10vh;
+  scroll-margin: 10vh;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;

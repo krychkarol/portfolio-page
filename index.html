@@ -32,15 +32,15 @@
     <!-- NAV -->
         <div class="navbar">
             <!-- Logo -->
-            <div class="logo">
+            <div class="logo" onclick="scrollToSection('home')">
                 <img src="./img/logo/K_logo.png" alt="">
             </div>
             <!-- Menu -->
             <div class="menu">
-                <div class="option"><span>About</span></div>
-                <div class="option"><span>Skills</span></div>
-                <div class="option"><span>Projects</span></div>
-                <div class="option"><span>Contact</span></div>
+                <div class="option" onclick="scrollToSection('about')"><span>About</span></div>
+                <div class="option" onclick="scrollToSection('skills')"><span>Skills</span></div>
+                <div class="option" onclick="scrollToSection('projects')"><span>Projects</span></div>
+                <div class="option" onclick="scrollToSection('contact')"><span>Contact</span></div>
             </div>
             <!-- Dropdown Menu -->
             <div class="dropdown-menu">
@@ -51,13 +51,13 @@
                     close
                 </span>
                 <div class="dropdown" id="dropdown-menu">
-                    <div class="option-dropdown"><span>About</span></div>
+                    <div class="option-dropdown" onclick="scrollToSection('about')"><span>About</span></div>
                     <div class="border"></div>
-                    <div class="option-dropdown"><span>Skills</span></div>
+                    <div class="option-dropdown" onclick="scrollToSection('skills')"><span>Skills</span></div>
                     <div class="border"></div>
-                    <div class="option-dropdown"><span>Projects</span></div>
+                    <div class="option-dropdown" onclick="scrollToSection('projects')"><span>Projects</span></div>
                     <div class="border"></div>
-                    <div class="option-dropdown"><span>Contact</span></div>
+                    <div class="option-dropdown" onclick="scrollToSection('contact')"><span>Contact</span></div>
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@
     <!-- /NAV -->
 
     <!-- HOME -->
-        <section class="home">
+        <section class="home" id="home">
             <div class="wrapper">
                 <span class="home1 html">&lt;home&gt;</span>
                 <div class="text">
@@ -144,7 +144,7 @@
     <div class="spacer"></div>
 
     <!-- ABOUT -->
-        <section class="about">
+        <section class="about" id="about">
             <div class="wrapper">
                 <span class="html about1 aboutHTML">&lt;about&gt;</span>
                 <div class="container">
@@ -184,7 +184,7 @@
     <div class="spacer"></div>
 
     <!-- SKILLS -->
-        <section class="skills">
+        <section class="skills" id="skills">
             <div class="wrapper">
                 <span class="html skills1 skillsHTML">&lt;skills&gt;</span>
                 <div class="container">
@@ -224,7 +224,7 @@
     <div class="spacer"></div>
 
     <!-- PROJECTS -->
-        <section class="projects">
+        <section class="projects" id="projects">
             <div class="wrapper">
                 <span class="html projects1 projectsHTML">&lt;projects&gt;</span>
                 <div class="container">
@@ -317,7 +317,7 @@
     <div class="spacer"></div>
 
     <!-- CONTACT FORM -->
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="wrapper">
             <span class="html contact1 contactHTML">&lt;contact&gt;</span>
             <div class="container">

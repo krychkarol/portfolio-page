@@ -87,6 +87,10 @@ function isScrolledIntoView(el) {
     return isVisible;
 }
 
+function scrollToSection(element) {
+    document.getElementById(element).scrollIntoView({behavior: 'smooth'});
+}
+
 //NAVBAR
 document.getElementById('open-menu').addEventListener('click', toggleMenu);
 document.getElementById('close-menu').addEventListener('click', toggleMenu);
