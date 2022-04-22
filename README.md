@@ -4,8 +4,7 @@
 Single Page Application with scroll based animation.
 
 ## Technologies
-JS, HTML, SCSS.
-EmailJS library.
+JS, HTML, SCSS, EmailJS
 
 ## Live Demo
 Application deployed on Heroku - [Demo]()
