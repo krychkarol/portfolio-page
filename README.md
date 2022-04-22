@@ -7,6 +7,6 @@ Single Page Application with scroll based animation.
 JS, HTML, SCSS, EmailJS
 
 ## Live Demo
-Application deployed on Heroku - [Demo]()
+Application deployed on Heroku - [Demo](https://portfolio-page-demo.herokuapp.com/)
 
 Application is deployed on free hosting - this may cause low performence, long loading or errors (try refresh)
