@@ -3,6 +3,8 @@
 ## General info
 Single Page Application with scroll based animation.
 
+Do not consider this as my portfolio :)
+
 ## Technologies
 JS, HTML, SCSS, EmailJS
 
